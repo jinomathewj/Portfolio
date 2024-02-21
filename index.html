@@ -1,0 +1,237 @@
+<?php
+include ('db_connect/connection.php');
+?>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+<body>
+   
+
+  
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<!-- header section starts  -->
+
+<header>
+
+    <input type="checkbox" name="" id="toggler">
+    <label for="toggler" class="fas fa-bars"></label>
+
+   
+
+    <nav class="navbar">
+        <a href="#home">home</a> 
+        <a href="#about">about</a>
+        <a href="#skills">skills</a>
+        <a href="#showcase">showcase</a>
+        <a href="#contact">contact</a>
+    </nav>
+
+   
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3 class="im">I'M</h3>
+        <h3 class="jmj">JINO MATHEW JOHN</h3>
+        <p class="spec">UI/UX DESIGNER / 3D ARTIST / GRAPHIC DESIGNER</p>
+       
+        <button id="about">Know More</button>
+    </div>
+    
+</section>
+
+<!-- about -->
+   
+   <section class="about-sec" id="about">
+    <div class="abt-img">
+        
+    </div>
+       <div class="abt-txt">
+        <p>I’m a graphic designer student based in
+            Kerala,India , who is persuing my interest 
+            in 3D modelling  as well as Graphic Designing
+            ,UI/UX designing. I am continuing my studies 
+            at Yeldo mar baselios college,kothamagalam
+            ,Kerala , India  from 2018-2023 . I worked as
+            an Intern at Magmyth VFX studio focusing 
+            mainly on 3D modelling. I love colors, shapes
+             and structures and working on fun projects
+             to try out some new techniques and things 
+            i always wanted to do.
+            </p>
+       </div>
+       
+   </section>
+    
+   <section class="skills" >
+    <div class="sk">
+    <h1>EDUCATION</h1>
+        <p>
+            Im currently a Graphic design student at Yeldo Mar Baselios College ,Kothamangalam.
+            Attended Advanced CSS Certificate Course to know more about UI/UX designing.
+            I've worked as an Intern at Magmyth VFX Studio located in Vytila , Ernakulam for a 
+            month which improved my passion towards 3D Modelling. I'm also currently working as a
+            3D Artist at BME XR tech as  freelance.</p><button>Know More</button></div>
+        
+   </section>
+   <section class="sec-skills" id="skills">
+    <div class="box-cont">
+     <div class="box1"><h1>90%</h1></div>
+     <div class="box-vs"></div>
+    </div>
+    <div class="box-cont">
+        <div class="box2"><h1>90%</h1></div>
+        <div class="box-illus"></div>
+    </div>
+    <div class="box-cont">
+        <div class="box3"><h1>95%</h1></div>
+        <div class="box-maya"></div>
+    </div>
+    <div class="box-cont">
+        <div class="box4"><h1>80%</h1></div>
+        <div class="box-photo"></div>
+    </div>
+    <div class="box-cont">
+        <div class="box5"><h1>60%</h1></div>
+        <div class="box-indes"></div>
+       </div>
+    
+        
+      
+
+   </section>
+   <section class="sec-works" id="showcase">
+      <div class="left-cnt">
+        
+        <div class="left-img"> 
+            <div class="text"><span> Tesla <br><br> Model X Poster Design</span></div>
+        </div>
+        
+      </div>
+
+       <div class="right-img">
+        <div class="top-cont"> 
+            <div class="top-img">
+                <div class="text"><span> Nike <br><br> Natural Element Poster Design</span></div>
+            </div>
+        </div>
+          <div class="bot-cont">
+               <div class="bottom-img">
+                   <div class="text"><span> Interior Design <br><br> 3D Interior Model</span></div>
+                     
+                </div>
+          </div>
+       </div>
+   </section>
+   <section class="sec-works1">
+      
+    <div class="right-img1">
+
+        <div class="top1-cont">
+               <div class="top-img1"> <div class="text"><span>  Rolls Royce <br><br> 3D Model </span></div>
+
+        </div>
+        </div>
+
+        <div class="bot1-cont">
+            <div class="bottom-img1">
+                <div class="top-img1">
+                    <div class="text"><span> Prop Model <br><br> Lamp 3D Model</span>
+                    </div>
+                </div>
+           </div>
+      </div>
+   </div>
+      <div class="left1-cont">
+        <div class="left-img1">
+            <div class="text"><span> Tesla<br><br> Model X Poster Design</span>
+            </div>
+        </div>
+      
+      </div>
+   
+</section>
+   
+<section class="contact" id="contact">
+        
+    <button>See More</button>
+    <div class="contact-cont">
+        <div class="left-box">get in <br> touch</div>
+        <div class="right-box">
+              <form method="post" action='insert.php'>
+                 <input type="text" class="mail" placeholder="E-mail" required name="u_mail">
+                 <br>
+                 <input type="text" class="name" placeholder="Name" required name="u_name">
+                 <br>
+                 <textarea name="message" id="" cols="30" rows="10" placeholder="Message" required name="u_msg"></textarea>
+                 <button name="sub_btn">Submit</button>
+              </form>
+        </div>
+    </div>
+ 
+</section>
+<section class="footer">
+    <div class="social-media">
+    <div class="in"></div>
+    <div class="insta"></div>
+   </div>
+    
+
+    <p>Copyright @ 2022 Jino Mathew John All rights reserved.</p>
+
+</section>
+
+
+   
+</body>
+
+
+
+</html>
+
+<?php
+
+    
+
+    if(isset($_POST['sub_btn']))
+    {
+        $email = $_POST['u_mail'];
+        $name= $_POST['u_name'];
+        $msg= $_POST['u_msg'];
+
+
+        $query = "insert into stu_200021021061 values(
+             NULL,
+            '$email',
+            '$name',
+            '$msg',
+        );";
+
+
+        $query_run = mysqli_query($connection, $query);
+
+            if($query_run)
+            {
+                echo "Added";
+
+                echo "<script>alert('Successfully Added');</script>";
+
+                // header("location: sucess.html");
+            }
+    }
+?>
